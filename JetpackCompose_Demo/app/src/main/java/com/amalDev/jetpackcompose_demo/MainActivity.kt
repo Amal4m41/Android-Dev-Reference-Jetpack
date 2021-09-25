@@ -6,6 +6,7 @@ import android.text.Layout
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -33,13 +34,25 @@ class MainActivity : ComponentActivity() {
 //                }
 //            }
 //            Greeting(name = "Amal")
-            Row(modifier = Modifier
+            Column(modifier = Modifier
                 .width(200.dp)
                 .fillMaxHeight(0.7f)
-                .background(Color.Green),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceAround){
-                Text(text = "Hello")
+//                .fillMaxWidth()
+                .background(Color.Green)
+                .padding(10.dp)
+                .border(5.dp, Color.Blue)
+                .padding(5.dp)
+                .border(10.dp, Color.Yellow)
+                .padding(10.dp)
+                .border(5.dp, Color.Red)
+                .padding(5.dp)
+                ){
+                Text(text = "Hello",modifier = Modifier
+                    .border(10.dp, Color.Magenta)
+                    .padding(15.dp)
+                    .border(15.dp, Color.Black)
+                    .padding(15.dp))
+                Spacer(modifier = Modifier.height(10.dp))
                 Text(text = "World")
                 Text(text = "Again")
             }
@@ -54,8 +67,20 @@ class MainActivity : ComponentActivity() {
 //    Text(text = "Hello $name!")
 //}
 //
-//@Preview(showBackground = true)
+//@Preview(
+//    name = "My Preview",
+//    showSystemUi = true
+//)
 //@Composable
 //fun DefaultPreview() {
-//        Greeting("Android")
+//    Row(modifier = Modifier
+//        .width(200.dp)
+//        .fillMaxHeight(0.7f)
+//        .background(Color.Green),
+//        verticalAlignment = Alignment.CenterVertically,
+//        horizontalArrangement = Arrangement.SpaceAround){
+//        Text(text = "Hello")
+//        Text(text = "World")
+//        Text(text = "Again")
+//    }
 //}
