@@ -20,19 +20,31 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.amaldev.textstyledemo.ui.theme.TextStyleDemoTheme
-import com.amaldev.textstyledemo.ui.theme.User
-import com.amaldev.textstyledemo.ui.theme.UserList
+
+
+//Creating custom font
+//The names of the fonts should be in lowercase and with underscore if necessary.
+val fontFamilyCustom = FontFamily(
+    Font(R.font.gemunulibre_light, FontWeight.Light ),
+    Font(R.font.gemunulibre_medium, FontWeight.Medium ),
+    Font(R.font.gemunulibre_bold, FontWeight.Bold )
+)
 
 class MainActivity : ComponentActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            UserList()
+//            UserList()
+            DemoTextStyle()
         }
     }
 }
@@ -102,6 +114,7 @@ fun MyPreview(){
     Surface(modifier = Modifier.fillMaxSize()) {
 //        TitleText()
 //        UserCard()
-        UserList()
+//        UserList()
+        DemoTextStyle()
     }
 }

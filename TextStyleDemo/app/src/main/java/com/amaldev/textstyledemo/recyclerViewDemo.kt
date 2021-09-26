@@ -1,4 +1,4 @@
-package com.amaldev.textstyledemo.ui.theme
+package com.amaldev.textstyledemo
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.wrapContentHeight
